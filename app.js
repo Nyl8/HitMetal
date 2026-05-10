@@ -295,6 +295,13 @@ async function main() {
     return;
   }
 
+  // Optional ?s=NN override — start at NN seconds (handy for testing).
+  const sOverride = params.get("s");
+  if (sOverride !== null) {
+    const sec = parseInt(sOverride, 10);
+    if (!isNaN(sec) && sec >= 0) card.startMs = sec * 1000;
+  }
+
   // Auth check
   const token = await ensureValidToken();
   if (!token) {

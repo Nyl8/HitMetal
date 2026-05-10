@@ -7,7 +7,7 @@
       "artist": "Led Zeppelin",
       "song": "Whole Lotta Love",
       "year": 1969,
-      "startMs": 90000,
+      "startMs": 0,
       "durationMs": 333893
     },
     {
@@ -16,7 +16,7 @@
       "artist": "Black Sabbath",
       "song": "Paranoid",
       "year": 1970,
-      "startMs": 55646,
+      "startMs": 0,
       "durationMs": 168626
     },
     {
@@ -25,7 +25,7 @@
       "artist": "Deep Purple",
       "song": "Smoke on the Water",
       "year": 1972,
-      "startMs": 90000,
+      "startMs": 0,
       "durationMs": 340742
     },
     {
@@ -34,7 +34,7 @@
       "artist": "Kiss",
       "song": "Detroit Rock City",
       "year": 1976,
-      "startMs": 75063,
+      "startMs": 73000,
       "durationMs": 227466
     },
     {
@@ -43,7 +43,7 @@
       "artist": "Rainbow",
       "song": "Stargazer",
       "year": 1976,
-      "startMs": 90000,
+      "startMs": 0,
       "durationMs": 506160
     },
     {
@@ -52,7 +52,7 @@
       "artist": "Thin Lizzy",
       "song": "The Boys Are Back in Town",
       "year": 1976,
-      "startMs": 88017,
+      "startMs": 0,
       "durationMs": 266720
     },
     {
@@ -61,7 +61,7 @@
       "artist": "Queen",
       "song": "We Will Rock You",
       "year": 1977,
-      "startMs": 40281,
+      "startMs": 0,
       "durationMs": 122066
     },
     {
@@ -70,7 +70,7 @@
       "artist": "AC/DC",
       "song": "Highway to Hell",
       "year": 1979,
-      "startMs": 68676,
+      "startMs": 0,
       "durationMs": 208110
     },
     {
@@ -79,7 +79,7 @@
       "artist": "AC/DC",
       "song": "Back in Black",
       "year": 1980,
-      "startMs": 84480,
+      "startMs": 0,
       "durationMs": 256000
     },
     {
@@ -88,7 +88,7 @@
       "artist": "Judas Priest",
       "song": "Breaking the Law",
       "year": 1980,
-      "startMs": 50767,
+      "startMs": 0,
       "durationMs": 153840
     },
     {
@@ -97,7 +97,7 @@
       "artist": "Motörhead",
       "song": "Ace of Spades",
       "year": 1980,
-      "startMs": 55545,
+      "startMs": 0,
       "durationMs": 168320
     },
     {
@@ -106,7 +106,7 @@
       "artist": "Ozzy Osbourne",
       "song": "Crazy Train",
       "year": 1980,
-      "startMs": 90000,
+      "startMs": 0,
       "durationMs": 293183
     },
     {
@@ -115,7 +115,7 @@
       "artist": "Dio",
       "song": "Holy Diver",
       "year": 1983,
-      "startMs": 90000,
+      "startMs": 0,
       "durationMs": 340640
     },
     {
@@ -124,7 +124,7 @@
       "artist": "Iron Maiden",
       "song": "The Trooper",
       "year": 1983,
-      "startMs": 83401,
+      "startMs": 0,
       "durationMs": 252733
     },
     {
@@ -133,7 +133,7 @@
       "artist": "Metallica",
       "song": "Ride the Lightning",
       "year": 1984,
-      "startMs": 90000,
+      "startMs": 0,
       "durationMs": 396986
     },
     {
@@ -142,7 +142,7 @@
       "artist": "Celtic Frost",
       "song": "Circle of the Tyrants",
       "year": 1985,
-      "startMs": 90000,
+      "startMs": 0,
       "durationMs": 276933
     },
     {
@@ -151,7 +151,7 @@
       "artist": "S.O.D.",
       "song": "Speak English or Die",
       "year": 1985,
-      "startMs": 47827,
+      "startMs": 0,
       "durationMs": 144933
     },
     {
@@ -160,7 +160,7 @@
       "artist": "Bon Jovi",
       "song": "Livin' on a Prayer",
       "year": 1986,
-      "startMs": 82266,
+      "startMs": 0,
       "durationMs": 249293
     },
     {
@@ -169,7 +169,7 @@
       "artist": "Europe",
       "song": "The Final Countdown",
       "year": 1986,
-      "startMs": 90000,
+      "startMs": 0,
       "durationMs": 310333
     },
     {
@@ -178,7 +178,7 @@
       "artist": "Megadeth",
       "song": "Peace Sells",
       "year": 1986,
-      "startMs": 80572,
+      "startMs": 0,
       "durationMs": 244160
     },
     {
@@ -187,7 +187,7 @@
       "artist": "Metallica",
       "song": "Master of Puppets",
       "year": 1986,
-      "startMs": 90000,
+      "startMs": 0,
       "durationMs": 515386
     },
     {
@@ -196,7 +196,7 @@
       "artist": "Slayer",
       "song": "Raining Blood",
       "year": 1986,
-      "startMs": 84211,
+      "startMs": 90000,
       "durationMs": 255186
     },
     {
@@ -205,7 +205,7 @@
       "artist": "Anthrax",
       "song": "Caught in a Mosh",
       "year": 1987,
-      "startMs": 90000,
+      "startMs": 0,
       "durationMs": 300173
     },
     {
@@ -214,7 +214,7 @@
       "artist": "Guns N' Roses",
       "song": "Sweet Child o' Mine",
       "year": 1987,
-      "startMs": 90000,
+      "startMs": 0,
       "durationMs": 356066
     },
     {
@@ -223,7 +223,7 @@
       "artist": "Living Colour",
       "song": "Cult of Personality",
       "year": 1988,
-      "startMs": 90000,
+      "startMs": 0,
       "durationMs": 292800
     },
     {
@@ -232,7 +232,7 @@
       "artist": "Alice Cooper",
       "song": "Poison",
       "year": 1989,
-      "startMs": 89004,
+      "startMs": 0,
       "durationMs": 269712
     },
     {
@@ -241,7 +241,7 @@
       "artist": "Bolt Thrower",
       "song": "World Eater",
       "year": 1989,
-      "startMs": 90000,
+      "startMs": 0,
       "durationMs": 294600
     },
     {
@@ -250,7 +250,7 @@
       "artist": "Faith No More",
       "song": "Epic",
       "year": 1989,
-      "startMs": 90000,
+      "startMs": 0,
       "durationMs": 293653
     },
     {
@@ -259,7 +259,7 @@
       "artist": "Obituary",
       "song": "Slowly We Rot",
       "year": 1989,
-      "startMs": 72080,
+      "startMs": 0,
       "durationMs": 218426
     },
     {
@@ -268,7 +268,7 @@
       "artist": "Pestilence",
       "song": "Out of the Body",
       "year": 1989,
-      "startMs": 90000,
+      "startMs": 0,
       "durationMs": 279106
     },
     {
@@ -277,7 +277,7 @@
       "artist": "AC/DC",
       "song": "Thunderstruck",
       "year": 1990,
-      "startMs": 90000,
+      "startMs": 0,
       "durationMs": 292333
     },
     {
@@ -286,7 +286,7 @@
       "artist": "Entombed",
       "song": "Left Hand Path",
       "year": 1990,
-      "startMs": 90000,
+      "startMs": 0,
       "durationMs": 399093
     },
     {
@@ -295,7 +295,7 @@
       "artist": "Megadeth",
       "song": "Holy Wars... The Punishment Due",
       "year": 1990,
-      "startMs": 90000,
+      "startMs": 0,
       "durationMs": 392600
     },
     {
@@ -304,7 +304,7 @@
       "artist": "Pantera",
       "song": "Cowboys From Hell",
       "year": 1990,
-      "startMs": 80365,
+      "startMs": 0,
       "durationMs": 243533
     },
     {
@@ -313,7 +313,7 @@
       "artist": "Metallica",
       "song": "Enter Sandman",
       "year": 1991,
-      "startMs": 90000,
+      "startMs": 0,
       "durationMs": 331560
     },
     {
@@ -322,7 +322,7 @@
       "artist": "Nirvana",
       "song": "Smells Like Teen Spirit",
       "year": 1991,
-      "startMs": 90000,
+      "startMs": 0,
       "durationMs": 301920
     },
     {
@@ -331,7 +331,7 @@
       "artist": "Ugly Kid Joe",
       "song": "Everything About You",
       "year": 1991,
-      "startMs": 85866,
+      "startMs": 0,
       "durationMs": 260200
     },
     {
@@ -340,7 +340,7 @@
       "artist": "Alice in Chains",
       "song": "Would?",
       "year": 1992,
-      "startMs": 68235,
+      "startMs": 0,
       "durationMs": 206773
     },
     {
@@ -349,7 +349,7 @@
       "artist": "Cannibal Corpse",
       "song": "Hammer Smashed Face",
       "year": 1992,
-      "startMs": 80110,
+      "startMs": 0,
       "durationMs": 242760
     },
     {
@@ -358,7 +358,7 @@
       "artist": "Rage Against The Machine",
       "song": "Killing in the Name",
       "year": 1992,
-      "startMs": 90000,
+      "startMs": 0,
       "durationMs": 313573
     },
     {
@@ -367,7 +367,7 @@
       "artist": "Sleep",
       "song": "Dragonaut",
       "year": 1992,
-      "startMs": 90000,
+      "startMs": 0,
       "durationMs": 343160
     },
     {
@@ -376,7 +376,7 @@
       "artist": "Morbid Angel",
       "song": "God of Emptiness",
       "year": 1993,
-      "startMs": 90000,
+      "startMs": 0,
       "durationMs": 326933
     },
     {
@@ -394,7 +394,7 @@
       "artist": "Corrosion of Conformity",
       "song": "Clean My Wounds",
       "year": 1994,
-      "startMs": 70188,
+      "startMs": 0,
       "durationMs": 212693
     },
     {
@@ -403,7 +403,7 @@
       "artist": "Emperor",
       "song": "I Am the Black Wizards",
       "year": 1994,
-      "startMs": 90000,
+      "startMs": 0,
       "durationMs": 360840
     },
     {
@@ -412,7 +412,7 @@
       "artist": "Machine Head",
       "song": "Davidian",
       "year": 1994,
-      "startMs": 90000,
+      "startMs": 0,
       "durationMs": 296626
     },
     {
@@ -421,7 +421,7 @@
       "artist": "Soundgarden",
       "song": "Black Hole Sun",
       "year": 1994,
-      "startMs": 90000,
+      "startMs": 0,
       "durationMs": 318586
     },
     {
@@ -430,7 +430,7 @@
       "artist": "Cathedral",
       "song": "Hopkins (The Witchfinder General)",
       "year": 1995,
-      "startMs": 90000,
+      "startMs": 0,
       "durationMs": 319093
     },
     {
@@ -439,7 +439,7 @@
       "artist": "Death",
       "song": "Crystal Mountain",
       "year": 1995,
-      "startMs": 90000,
+      "startMs": 0,
       "durationMs": 307426
     },
     {
@@ -448,7 +448,7 @@
       "artist": "Dissection",
       "song": "Night's Blood",
       "year": 1995,
-      "startMs": 90000,
+      "startMs": 0,
       "durationMs": 401658
     },
     {
@@ -457,7 +457,7 @@
       "artist": "Fear Factory",
       "song": "Replica",
       "year": 1995,
-      "startMs": 78328,
+      "startMs": 0,
       "durationMs": 237360
     },
     {
@@ -484,7 +484,7 @@
       "artist": "Rob Zombie / White Zombie",
       "song": "More Human Than Human",
       "year": 1995,
-      "startMs": 78201,
+      "startMs": 0,
       "durationMs": 236973
     },
     {
@@ -493,7 +493,7 @@
       "artist": "Marilyn Manson",
       "song": "The Beautiful People",
       "year": 1996,
-      "startMs": 72212,
+      "startMs": 0,
       "durationMs": 218826
     },
     {
@@ -502,7 +502,7 @@
       "artist": "Samael",
       "song": "Rain",
       "year": 1996,
-      "startMs": 79609,
+      "startMs": 0,
       "durationMs": 241240
     },
     {
@@ -511,7 +511,7 @@
       "artist": "Sepultura",
       "song": "Roots Bloody Roots",
       "year": 1996,
-      "startMs": 70043,
+      "startMs": 0,
       "durationMs": 212253
     },
     {
@@ -520,7 +520,7 @@
       "artist": "Dimmu Borgir",
       "song": "Mourning Palace",
       "year": 1997,
-      "startMs": 90000,
+      "startMs": 0,
       "durationMs": 313360
     },
     {
@@ -529,7 +529,7 @@
       "artist": "Foo Fighters",
       "song": "Everlong",
       "year": 1997,
-      "startMs": 82680,
+      "startMs": 0,
       "durationMs": 250546
     },
     {
@@ -538,7 +538,7 @@
       "artist": "Rammstein",
       "song": "Du Hast",
       "year": 1997,
-      "startMs": 77294,
+      "startMs": 0,
       "durationMs": 234226
     },
     {
@@ -547,7 +547,7 @@
       "artist": "Korn",
       "song": "Freak on a Leash",
       "year": 1998,
-      "startMs": 84390,
+      "startMs": 0,
       "durationMs": 255729
     },
     {
@@ -556,7 +556,7 @@
       "artist": "The Offspring",
       "song": "The Kids Aren't Alright",
       "year": 1998,
-      "startMs": 59452,
+      "startMs": 0,
       "durationMs": 180160
     },
     {
@@ -565,7 +565,7 @@
       "artist": "The Dillinger Escape Plan",
       "song": "43% Burnt",
       "year": 1999,
-      "startMs": 89530,
+      "startMs": 0,
       "durationMs": 271306
     },
     {
@@ -583,7 +583,7 @@
       "artist": "Disturbed",
       "song": "Down with the Sickness",
       "year": 2000,
-      "startMs": 90000,
+      "startMs": 0,
       "durationMs": 279213
     },
     {
@@ -592,7 +592,7 @@
       "artist": "Limp Bizkit",
       "song": "Break Stuff",
       "year": 2000,
-      "startMs": 55012,
+      "startMs": 0,
       "durationMs": 166706
     },
     {
@@ -601,7 +601,7 @@
       "artist": "Linkin Park",
       "song": "One Step Closer",
       "year": 2000,
-      "startMs": 51919,
+      "startMs": 0,
       "durationMs": 157333
     },
     {
@@ -610,7 +610,7 @@
       "artist": "Nightwish",
       "song": "Wishmaster",
       "year": 2000,
-      "startMs": 87128,
+      "startMs": 0,
       "durationMs": 264026
     },
     {
@@ -619,7 +619,7 @@
       "artist": "Papa Roach",
       "song": "Last Resort",
       "year": 2000,
-      "startMs": 65968,
+      "startMs": 0,
       "durationMs": 199906
     },
     {
@@ -628,7 +628,7 @@
       "artist": "Rammstein",
       "song": "Sonne",
       "year": 2001,
-      "startMs": 89905,
+      "startMs": 0,
       "durationMs": 272440
     },
     {
@@ -637,7 +637,7 @@
       "artist": "System of a Down",
       "song": "Chop Suey!",
       "year": 2001,
-      "startMs": 69379,
+      "startMs": 0,
       "durationMs": 210240
     },
     {
@@ -646,7 +646,7 @@
       "artist": "Tool",
       "song": "Schism",
       "year": 2001,
-      "startMs": 90000,
+      "startMs": 0,
       "durationMs": 407860
     },
     {
@@ -655,7 +655,7 @@
       "artist": "Within Temptation",
       "song": "Ice Queen",
       "year": 2001,
-      "startMs": 90000,
+      "startMs": 0,
       "durationMs": 322800
     },
     {
@@ -664,7 +664,7 @@
       "artist": "Audioslave",
       "song": "Like a Stone",
       "year": 2002,
-      "startMs": 90000,
+      "startMs": 0,
       "durationMs": 293960
     },
     {
@@ -673,7 +673,7 @@
       "artist": "Queens of the Stone Age",
       "song": "No One Knows",
       "year": 2002,
-      "startMs": 90000,
+      "startMs": 0,
       "durationMs": 278746
     },
     {
@@ -682,7 +682,7 @@
       "artist": "Black Label Society",
       "song": "Stillborn",
       "year": 2003,
-      "startMs": 64693,
+      "startMs": 0,
       "durationMs": 196040
     },
     {
@@ -691,7 +691,7 @@
       "artist": "Evanescence",
       "song": "Bring Me to Life",
       "year": 2003,
-      "startMs": 77844,
+      "startMs": 0,
       "durationMs": 235893
     },
     {
@@ -700,7 +700,7 @@
       "artist": "Linkin Park",
       "song": "Numb",
       "year": 2003,
-      "startMs": 61881,
+      "startMs": 0,
       "durationMs": 187520
     },
     {
@@ -709,7 +709,7 @@
       "artist": "Killswitch Engage",
       "song": "The End of Heartache",
       "year": 2004,
-      "startMs": 90000,
+      "startMs": 0,
       "durationMs": 298106
     },
     {
@@ -727,7 +727,7 @@
       "artist": "Opeth",
       "song": "Ghost of Perdition",
       "year": 2005,
-      "startMs": 90000,
+      "startMs": 0,
       "durationMs": 629480
     },
     {
@@ -736,7 +736,7 @@
       "artist": "Linkin Park",
       "song": "What I've Done",
       "year": 2007,
-      "startMs": 67724,
+      "startMs": 0,
       "durationMs": 205226
     },
     {
@@ -745,7 +745,7 @@
       "artist": "Meshuggah",
       "song": "Bleed",
       "year": 2008,
-      "startMs": 90000,
+      "startMs": 0,
       "durationMs": 442546
     },
     {
@@ -754,7 +754,7 @@
       "artist": "Sabaton",
       "song": "Ghost Division",
       "year": 2008,
-      "startMs": 76291,
+      "startMs": 0,
       "durationMs": 231186
     },
     {
@@ -763,7 +763,7 @@
       "artist": "Paradise Lost",
       "song": "Faith Divides Us - Death Unites Us",
       "year": 2009,
-      "startMs": 87001,
+      "startMs": 0,
       "durationMs": 263640
     },
     {
@@ -772,7 +772,7 @@
       "artist": "Megadeth",
       "song": "Public Enemy No. 1",
       "year": 2011,
-      "startMs": 84259,
+      "startMs": 0,
       "durationMs": 255333
     },
     {
@@ -781,7 +781,7 @@
       "artist": "Black Sabbath",
       "song": "God Is Dead?",
       "year": 2013,
-      "startMs": 90000,
+      "startMs": 120000,
       "durationMs": 532266
     },
     {
@@ -790,7 +790,7 @@
       "artist": "Devin Townsend",
       "song": "Kingdom",
       "year": 2014,
-      "startMs": 90000,
+      "startMs": 0,
       "durationMs": 329106
     },
     {
@@ -799,7 +799,7 @@
       "artist": "Iron Maiden",
       "song": "Speed of Light",
       "year": 2015,
-      "startMs": 90000,
+      "startMs": 0,
       "durationMs": 301745
     },
     {
@@ -808,7 +808,7 @@
       "artist": "Lamb of God",
       "song": "512",
       "year": 2015,
-      "startMs": 90000,
+      "startMs": 0,
       "durationMs": 284840
     },
     {
@@ -817,7 +817,7 @@
       "artist": "Slayer",
       "song": "Repentless",
       "year": 2015,
-      "startMs": 65955,
+      "startMs": 0,
       "durationMs": 199866
     },
     {
@@ -826,7 +826,7 @@
       "artist": "Ghost",
       "song": "Square Hammer",
       "year": 2016,
-      "startMs": 78966,
+      "startMs": 0,
       "durationMs": 239293
     },
     {
@@ -835,7 +835,7 @@
       "artist": "Sabaton",
       "song": "The Last Stand",
       "year": 2016,
-      "startMs": 77827,
+      "startMs": 0,
       "durationMs": 235840
     },
     {
@@ -844,7 +844,7 @@
       "artist": "Rammstein",
       "song": "Deutschland",
       "year": 2019,
-      "startMs": 90000,
+      "startMs": 0,
       "durationMs": 322339
     },
     {
@@ -853,7 +853,7 @@
       "artist": "Deftones",
       "song": "Ohms",
       "year": 2020,
-      "startMs": 82573,
+      "startMs": 0,
       "durationMs": 250222
     },
     {
@@ -862,7 +862,7 @@
       "artist": "Trivium",
       "song": "What the Dead Men Say",
       "year": 2020,
-      "startMs": 90000,
+      "startMs": 0,
       "durationMs": 285522
     },
     {
@@ -871,7 +871,7 @@
       "artist": "Sabaton",
       "song": "Christmas Truce",
       "year": 2021,
-      "startMs": 90000,
+      "startMs": 60000,
       "durationMs": 318000
     },
     {
@@ -880,7 +880,7 @@
       "artist": "Volbeat",
       "song": "Wait a Minute My Girl",
       "year": 2021,
-      "startMs": 46217,
+      "startMs": 0,
       "durationMs": 140053
     },
     {
@@ -889,7 +889,7 @@
       "artist": "In Flames",
       "song": "State of Slow Decay",
       "year": 2022,
-      "startMs": 78601,
+      "startMs": 0,
       "durationMs": 238187
     },
     {
@@ -898,7 +898,7 @@
       "artist": "Slipknot",
       "song": "The Dying Song (Time to Sing)",
       "year": 2022,
-      "startMs": 67183,
+      "startMs": 0,
       "durationMs": 203586
     }
   ]
