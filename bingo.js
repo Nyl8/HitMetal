@@ -38,7 +38,7 @@ const REDIRECT_URI = (() => {
 
 const FRAGMENT_MS = 25000;
 const THRESHOLD_YEAR = 1995;
-const STORAGE_KEY = "hm_bingo_state_v2"; // bumped from v1 (oude 6-categorie saves negeren)
+const STORAGE_KEY = "hm_bingo_state_v3";
 
 const LS = {
   token: "hm_access_token",
@@ -109,7 +109,9 @@ function saveState() {
 function loadState() {
   try {
     // ruim oude versies op
-    try { localStorage.removeItem("hm_bingo_state_v1"); } catch {}
+    ["hm_bingo_state_v1", "hm_bingo_state_v2"].forEach(k => {
+      try { localStorage.removeItem(k); } catch {}
+    });
     const s = localStorage.getItem(STORAGE_KEY);
     if (s) return JSON.parse(s);
   } catch {}
@@ -334,23 +336,15 @@ async function bootstrap() {
     }
 
     debugMsg("Stap 3/3: Spel klaarzetten…");
-    const saved = loadState();
-    if (saved && saved.players && saved.players.length > 0 && saved.phase !== "bingo") {
-      Object.assign(state, saved);
-      state.songs = songsData.cards;
-      setTimeout(() => {
-        if (state.phase === "play" || state.phase === "answer" || state.phase === "reveal") {
-          state.current = null;
-          goToPass();
-        } else {
-          goToPass();
-        }
-      }, 200);
-      debugMsg("Spel hervat");
-    } else {
-      show("setup");
-      renderPlayerList();
-    }
+    // Geen auto-hervatten: elke keer terug naar setup. Eventuele oude
+    // save-state wissen zodat hij nooit blijft hangen.
+    clearState();
+    state.players = [];
+    state.turnIdx = 0;
+    state.usedSongs = [];
+    state.current = null;
+    show("setup");
+    renderPlayerList();
   } catch (e) {
     debugMsg("⚠️ Bootstrap-fout:<br><small style='font-family:monospace;color:#ff6b6b'>"
       + (e.message || String(e)) + "</small>");
