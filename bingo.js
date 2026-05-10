@@ -38,7 +38,7 @@ const REDIRECT_URI = (() => {
 
 const FRAGMENT_MS = 25000;
 const THRESHOLD_YEAR = 1995;
-const STORAGE_KEY = "hm_bingo_state_v1";
+const STORAGE_KEY = "hm_bingo_state_v2"; // bumped from v1 (oude 6-categorie saves negeren)
 
 const LS = {
   token: "hm_access_token",
@@ -108,6 +108,8 @@ function saveState() {
 }
 function loadState() {
   try {
+    // ruim oude versies op
+    try { localStorage.removeItem("hm_bingo_state_v1"); } catch {}
     const s = localStorage.getItem(STORAGE_KEY);
     if (s) return JSON.parse(s);
   } catch {}
@@ -428,6 +430,17 @@ $("show-card").onclick = () => {
   show("card");
 };
 $("card-close").onclick = () => show(state.prevPhase || "turn");
+
+$("stop-game").onclick = () => {
+  if (!confirm("Spel stoppen? De voortgang gaat verloren.")) return;
+  clearState();
+  state = {
+    phase: "loading", songs: state.songs, players: [], turnIdx: 0,
+    usedSongs: [], current: null, prevPhase: null,
+  };
+  show("setup");
+  renderPlayerList();
+};
 
 $("spin-btn").onclick = () => {
   $("spin-btn").disabled = true;

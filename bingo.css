@@ -152,6 +152,10 @@ button:disabled { opacity: 0.4; cursor: not-allowed; }
   align-items: center;
   margin-bottom: 1rem;
 }
+.turn-header-actions {
+  display: flex;
+  gap: 4px;
+}
 #turn-name {
   font-family: 'Impact', sans-serif;
   font-size: 1.6rem;
