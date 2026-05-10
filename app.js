@@ -225,6 +225,56 @@ function addHint(text) {
   $actions().appendChild(p);
 }
 
+/* -------- QR scanner --------------------------------------------------- */
+
+let scanner = null;
+
+async function startScan() {
+  const app = document.getElementById("app");
+  app.innerHTML = `
+    <div id="logo">⚡ HITSTER METAL ⚡</div>
+    <div id="reader"></div>
+    <div id="status">Richt op QR-code…</div>
+    <div id="actions"></div>
+  `;
+
+  if (scanner) { try { await scanner.stop(); } catch (e) {} scanner = null; }
+
+  scanner = new Html5Qrcode("reader", { verbose: false });
+
+  try {
+    await scanner.start(
+      { facingMode: "environment" },
+      { fps: 10, qrbox: { width: 240, height: 240 } },
+      onScanSuccess,
+      () => {} // ignore per-frame "not found" errors
+    );
+  } catch (err) {
+    setStatus("Camera kon niet starten", true);
+    addHint(err.message || String(err));
+    addButton("Terug", () => { location.href = REDIRECT_URI; });
+    return;
+  }
+
+  async function onScanSuccess(decoded) {
+    try { await scanner.stop(); } catch (e) {}
+    scanner = null;
+
+    let cardId = null;
+    try {
+      const url = new URL(decoded);
+      cardId = url.searchParams.get("c");
+    } catch (e) { /* not a URL */ }
+
+    if (!cardId) {
+      setStatus("Geen geldige Hitster Metal QR", true);
+      addButton("Opnieuw scannen", startScan);
+      return;
+    }
+    location.href = `?c=${cardId}`;
+  }
+}
+
 /* -------- Main ---------------------------------------------------------- */
 
 async function main() {
@@ -268,7 +318,8 @@ async function main() {
   if (!cardId) {
     if (localStorage.getItem(LS.token)) {
       setStatus("Klaar voor gebruik");
-      addHint("Scan een Hitster Metal kaart om te starten.");
+      addButton("📷 Scan kaart", startScan);
+      addHint("Richt de camera op de QR-code van een kaart.");
     } else {
       setStatus("Eenmalig inloggen bij Spotify");
       addHint("Daarna onthoudt deze pagina je login.");
@@ -317,6 +368,7 @@ async function main() {
     await playCard(card);
     setStatus("Speelt af");
     addHint("Leg je telefoon neer en raad het jaar.");
+    addButton("📷 Scan volgende", startScan);
   } catch (e) {
     if (e.message === "NO_DEVICE") {
       setStatus("Geen actief Spotify-apparaat", true);

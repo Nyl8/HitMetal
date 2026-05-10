@@ -35,3 +35,16 @@ button:active { transform: scale(0.98); }
   max-width: 320px; line-height: 1.5;
 }
 .error { color: #ff6666; }
+
+#reader {
+  width: 100%;
+  max-width: 360px;
+  margin: 0 auto 1.5rem;
+  background: #000;
+  border-radius: 6px;
+  overflow: hidden;
+}
+#reader video { width: 100% !important; height: auto !important; display: block; }
+#reader__dashboard_section_csr { display: none !important; }
+#reader__camera_selection { display: none !important; }
+#reader__scan_region img { display: none !important; }
