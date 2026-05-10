@@ -39,8 +39,9 @@
     <button id="show-card" class="btn-link">mijn kaart</button>
   </div>
   <div id="spinner-stage">
-    <div id="spinner" class="spinner-idle">
-      <div class="spinner-ball"></div>
+    <div id="spinner-wrap">
+      <div id="spinner-pointer"></div>
+      <div id="spinner" class="spinner-idle"></div>
     </div>
     <div id="spinner-result" class="hidden"></div>
   </div>
@@ -70,13 +71,17 @@
 <!-- REVEAL -->
 <section id="screen-reveal" class="screen">
   <div id="reveal-verdict" class="verdict"></div>
-  <div class="song-info">
-    <div id="reveal-artist" class="reveal-artist"></div>
-    <div id="reveal-song" class="reveal-song"></div>
-    <div class="reveal-meta">
-      <span id="reveal-year"></span> · <span id="reveal-decade"></span> · <span id="reveal-country"></span>
+
+  <div class="hitster-card">
+    <div class="hitster-card-top">HITSTER METAL</div>
+    <div class="hitster-card-artist" id="reveal-artist"></div>
+    <div class="hitster-card-year" id="reveal-year"></div>
+    <div class="hitster-card-song" id="reveal-song"></div>
+    <div class="hitster-card-bottom">
+      <span id="reveal-country"></span>
     </div>
   </div>
+
   <div id="reveal-mark-area" class="hidden">
     <p>Kies een vakje om aan te kruisen:</p>
     <div id="reveal-card-grid" class="card-grid"></div>

@@ -169,33 +169,41 @@ button:disabled { opacity: 0.4; cursor: not-allowed; }
   min-height: 300px;
 }
 
+#spinner-wrap {
+  position: relative;
+  width: 220px;
+  height: 220px;
+}
+
+#spinner-pointer {
+  position: absolute;
+  top: -16px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 14px solid transparent;
+  border-right: 14px solid transparent;
+  border-top: 24px solid var(--fg);
+  z-index: 10;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.6));
+}
+
 #spinner {
   width: 220px;
   height: 220px;
   border-radius: 50%;
   background:
     conic-gradient(
-      var(--cat-decade) 0deg 60deg,
-      var(--cat-year5) 60deg 120deg,
-      var(--cat-year2) 120deg 180deg,
-      var(--cat-country) 180deg 240deg,
-      var(--cat-artist) 240deg 300deg,
-      var(--cat-beforeafter) 300deg 360deg
+      var(--cat-decade)      0deg   72deg,
+      var(--cat-year5)       72deg  144deg,
+      var(--cat-country)    144deg  216deg,
+      var(--cat-artist)     216deg  288deg,
+      var(--cat-beforeafter) 288deg 360deg
     );
   position: relative;
   box-shadow: 0 0 40px rgba(204,0,0,0.3), inset 0 0 30px rgba(0,0,0,0.5);
   border: 4px solid #000;
-}
-#spinner::before {
-  content: '';
-  position: absolute;
-  top: -16px;
-  left: 50%;
-  transform: translateX(-50%);
-  border-left: 12px solid transparent;
-  border-right: 12px solid transparent;
-  border-top: 20px solid var(--fg);
-  z-index: 2;
 }
 #spinner::after {
   content: '';
@@ -293,16 +301,69 @@ button:disabled { opacity: 0.4; cursor: not-allowed; }
 .verdict.correct { background: #2e7d32; color: #fff; }
 .verdict.wrong   { background: #c62828; color: #fff; }
 
-.song-info {
-  background: var(--bg-elev);
-  padding: 1.5rem;
-  border-radius: 4px;
-  margin-bottom: 1.5rem;
-  border-left: 4px solid var(--accent);
+/* ----- Hitster-style speelkaart ----- */
+.hitster-card {
+  background: linear-gradient(145deg, #1a1a1a 0%, #0a0a0a 100%);
+  border: 3px solid var(--accent);
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  margin: 0 auto 1.5rem;
+  max-width: 320px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.6), 0 0 40px rgba(204,0,0,0.15);
+  aspect-ratio: 5 / 7;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-.reveal-artist { font-family: 'Impact', sans-serif; font-size: 1.6rem; text-transform: uppercase; }
-.reveal-song { font-size: 1.2rem; color: var(--fg-dim); margin-top: 4px; }
-.reveal-meta { margin-top: 12px; color: var(--fg-dim); font-size: 0.95rem; }
+.hitster-card::before {
+  content: '';
+  position: absolute;
+  inset: 6px;
+  border: 1px solid rgba(204,0,0,0.4);
+  border-radius: 8px;
+  pointer-events: none;
+}
+.hitster-card-top {
+  font-family: 'Impact', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.25em;
+  color: var(--accent-hot);
+  text-transform: uppercase;
+}
+.hitster-card-artist {
+  font-family: 'Impact', sans-serif;
+  font-size: 1.4rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  line-height: 1.1;
+  color: var(--fg);
+  margin: 0 auto;
+  max-width: 90%;
+}
+.hitster-card-year {
+  font-family: 'Impact', sans-serif;
+  font-size: 4.5rem;
+  font-weight: 900;
+  color: var(--fg);
+  letter-spacing: 0.02em;
+  line-height: 1;
+  text-shadow: 0 0 20px rgba(204,0,0,0.5);
+}
+.hitster-card-song {
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--fg-dim);
+  line-height: 1.3;
+  padding: 0 1rem;
+}
+.hitster-card-bottom {
+  font-size: 0.8rem;
+  color: var(--fg-dim);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
 
 /* ----- bingo card grid ----- */
 .card-grid {
@@ -344,22 +405,9 @@ button:disabled { opacity: 0.4; cursor: not-allowed; }
 }
 .card-cell[data-color="decade"]       { background: var(--cat-decade); }
 .card-cell[data-color="year5"]        { background: var(--cat-year5); }
-.card-cell[data-color="year2"]        { background: var(--cat-year2); }
 .card-cell[data-color="country"]      { background: var(--cat-country); }
 .card-cell[data-color="artist"]       { background: var(--cat-artist); }
 .card-cell[data-color="beforeafter"]  { background: var(--cat-beforeafter); }
-.card-cell[data-color="free"]         { background: var(--cat-free); }
-.card-cell[data-color="free"]::after {
-  content: '★';
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.8rem;
-  color: #fff;
-  opacity: 0.6;
-}
 
 /* ----- bingo win screen ----- */
 .bingo-title {

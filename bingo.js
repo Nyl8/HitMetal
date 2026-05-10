@@ -53,13 +53,12 @@ const LS = {
 const CATEGORIES = [
   { id: "decade",      label: "Decennium",       question: "Uit welk decennium komt dit nummer?", input: "decade" },
   { id: "year5",       label: "Jaar (±5)",       question: "In welk jaar is dit nummer uitgebracht? (±5 jaar mag)", input: "year" },
-  { id: "year2",       label: "Jaar (±2)",       question: "In welk jaar is dit nummer uitgebracht? (±2 jaar mag)", input: "year" },
   { id: "country",     label: "Land",            question: "Uit welk land komt deze artiest?", input: "country" },
   { id: "artist",      label: "Artiest",         question: "Wie is de artiest?", input: "text" },
   { id: "beforeafter", label: "Voor of na " + THRESHOLD_YEAR, question: `Is dit nummer vóór of na ${THRESHOLD_YEAR} uitgebracht?`, input: "beforeafter" },
 ];
 const COLOR_VAR = {
-  decade: "var(--cat-decade)", year5: "var(--cat-year5)", year2: "var(--cat-year2)",
+  decade: "var(--cat-decade)", year5: "var(--cat-year5)",
   country: "var(--cat-country)", artist: "var(--cat-artist)", beforeafter: "var(--cat-beforeafter)",
 };
 
@@ -119,12 +118,11 @@ function clearState() { try { localStorage.removeItem(STORAGE_KEY); } catch {} }
 // ---------- BINGOKAART ----------
 function makeCard() {
   const colors = [];
-  ["decade","year5","year2","country","artist","beforeafter"].forEach(c => {
-    for (let i = 0; i < 4; i++) colors.push(c);
+  ["decade","year5","country","artist","beforeafter"].forEach(c => {
+    for (let i = 0; i < 5; i++) colors.push(c);
   });
-  const shuffled = shuffle(colors);
-  shuffled.splice(12, 0, "free"); // free space midden van 5x5
-  return shuffled.map((color, idx) => ({ color, marked: color === "free", idx }));
+  const shuffled = shuffle(colors); // 25 cellen, geen free space
+  return shuffled.map((color, idx) => ({ color, marked: false, idx }));
 }
 
 // ---------- SPOTIFY AUTH (zelfde patroon als app.js) ----------
@@ -280,7 +278,6 @@ function validateAnswer(input, category, song) {
   switch (category.id) {
     case "decade":  return parseInt(input, 10) === decadeOf(song.year);
     case "year5":   return Math.abs(parseInt(input, 10) - song.year) <= 5;
-    case "year2":   return Math.abs(parseInt(input, 10) - song.year) <= 2;
     case "country": return input === song.country;
     case "artist": {
       const norm = s => s.toLowerCase().replace(/[^a-z0-9]/g, "");
@@ -436,7 +433,7 @@ $("spin-btn").onclick = () => {
   $("spin-btn").disabled = true;
   const cat = pickCategory();
   const idx = CATEGORIES.findIndex(c => c.id === cat.id);
-  const segment = 60;
+  const segment = 72; // 360/5
   const targetCenter = (idx * segment) + (segment / 2);
   const rotations = 3 * 360;
   const endRotation = rotations + (360 - targetCenter);
@@ -528,18 +525,29 @@ function goToAnswer() {
     case "decade": {
       const sel = document.createElement("select");
       sel.id = "answer-decade";
+      const placeholder = document.createElement("option");
+      placeholder.value = "";
+      placeholder.textContent = "Kies decennium…";
+      placeholder.disabled = true;
+      placeholder.selected = true;
+      sel.appendChild(placeholder);
       ["1960","1970","1980","1990","2000","2010","2020"].forEach(d => {
         const o = document.createElement("option");
         o.value = d; o.textContent = d + "s";
         sel.appendChild(o);
       });
-      sel.value = "1990";
       area.appendChild(sel);
       break;
     }
     case "country": {
       const sel = document.createElement("select");
       sel.id = "answer-country";
+      const placeholder = document.createElement("option");
+      placeholder.value = "";
+      placeholder.textContent = "Kies land…";
+      placeholder.disabled = true;
+      placeholder.selected = true;
+      sel.appendChild(placeholder);
       const codes = Object.keys(COUNTRIES).sort((a,b) => COUNTRIES[a].localeCompare(COUNTRIES[b]));
       codes.forEach(c => {
         const o = document.createElement("option");
@@ -585,7 +593,7 @@ $("answer-submit").onclick = () => {
   if (cat.input === "decade")  val = $("answer-decade").value;
   if (cat.input === "country") val = $("answer-country").value;
   if (cat.input === "text")    val = $("answer-text").value;
-  if (!val && cat.input !== "country" && cat.input !== "decade") return;
+  if (!val) return; // niets ingevoerd of geen keuze gemaakt
   submitAnswer(val);
 };
 
@@ -608,7 +616,6 @@ function goToReveal() {
   $("reveal-artist").textContent = song.artist;
   $("reveal-song").textContent = song.song;
   $("reveal-year").textContent = song.year;
-  $("reveal-decade").textContent = decadeOf(song.year) + "s";
   $("reveal-country").textContent = COUNTRIES[song.country] || song.country;
 
   const markArea = $("reveal-mark-area");
