@@ -1,0 +1,374 @@
+/* ============================================================
+   HITSTER METAL BINGO — styling
+   Dark, ruig, mobile-first
+   ============================================================ */
+
+:root {
+  /* base */
+  --bg: #0a0a0a;
+  --bg-elev: #161616;
+  --bg-elev2: #222;
+  --fg: #f5f5f5;
+  --fg-dim: #888;
+  --accent: #cc0000;
+  --accent-hot: #ff1a1a;
+
+  /* categorie-kleuren */
+  --cat-decade:    #2196f3; /* blauw */
+  --cat-year5:     #ff9800; /* oranje */
+  --cat-year2:     #4caf50; /* groen */
+  --cat-country:   #9c27b0; /* paars */
+  --cat-artist:    #f44336; /* rood */
+  --cat-beforeafter: #ffeb3b; /* geel */
+  --cat-free:      #555;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  height: 100%;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: 'Trebuchet MS', 'Lucida Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(ellipse at top, rgba(204,0,0,0.08), transparent 60%),
+    var(--bg);
+  padding: 20px 16px env(safe-area-inset-bottom, 20px);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+h1, h2 {
+  font-family: 'Impact', 'Oswald', 'Arial Narrow', sans-serif;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+h1 { font-size: 2.2rem; line-height: 1; margin-bottom: 1.5rem; text-align: center; }
+h2 { font-size: 1.5rem; margin-bottom: 1rem; text-align: center; }
+.accent { color: var(--accent-hot); }
+
+p { line-height: 1.5; }
+.status { color: var(--fg-dim); font-size: 0.9rem; margin-top: 1rem; text-align: center; }
+.question { font-size: 1.2rem; text-align: center; margin: 1.5rem 0; }
+.big-name {
+  font-family: 'Impact', sans-serif;
+  font-size: 3rem;
+  text-align: center;
+  margin: 2rem 0;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--accent-hot);
+}
+
+/* ----- screens ----- */
+.screen {
+  display: none;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  animation: fadein 0.25s ease;
+}
+.screen.active { display: flex; }
+@keyframes fadein { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+.hidden { display: none !important; }
+
+/* ----- buttons ----- */
+button {
+  font-family: inherit;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 14px 20px;
+  margin: 6px 0;
+  transition: transform 0.05s, opacity 0.15s;
+  -webkit-tap-highlight-color: transparent;
+}
+button:active { transform: scale(0.98); }
+button:disabled { opacity: 0.4; cursor: not-allowed; }
+
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.btn-primary:hover:not(:disabled) { background: var(--accent-hot); }
+
+.btn-secondary {
+  background: var(--bg-elev);
+  color: var(--fg);
+  border: 1px solid #333;
+}
+.btn-secondary:hover:not(:disabled) { background: var(--bg-elev2); }
+
+.btn-link {
+  background: transparent;
+  color: var(--fg-dim);
+  text-decoration: underline;
+  padding: 4px 8px;
+  font-size: 0.85rem;
+}
+
+/* ----- setup screen ----- */
+#player-list { margin-bottom: 1rem; }
+.player-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+.player-row input {
+  flex: 1;
+  padding: 12px;
+  font-size: 1rem;
+  background: var(--bg-elev);
+  color: var(--fg);
+  border: 1px solid #333;
+  border-radius: 4px;
+}
+.player-row input:focus { outline: 2px solid var(--accent); }
+.player-row .remove {
+  background: transparent;
+  color: var(--fg-dim);
+  font-size: 1.2rem;
+  padding: 0 12px;
+}
+
+/* ----- turn / spinner ----- */
+.turn-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+#turn-name {
+  font-family: 'Impact', sans-serif;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  color: var(--accent-hot);
+}
+
+#spinner-stage {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0;
+  min-height: 300px;
+}
+
+#spinner {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background:
+    conic-gradient(
+      var(--cat-decade) 0deg 60deg,
+      var(--cat-year5) 60deg 120deg,
+      var(--cat-year2) 120deg 180deg,
+      var(--cat-country) 180deg 240deg,
+      var(--cat-artist) 240deg 300deg,
+      var(--cat-beforeafter) 300deg 360deg
+    );
+  position: relative;
+  box-shadow: 0 0 40px rgba(204,0,0,0.3), inset 0 0 30px rgba(0,0,0,0.5);
+  border: 4px solid #000;
+}
+#spinner::before {
+  content: '';
+  position: absolute;
+  top: -16px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-top: 20px solid var(--fg);
+  z-index: 2;
+}
+#spinner::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  background: #000;
+  border-radius: 50%;
+  border: 2px solid #444;
+}
+.spinner-spinning { animation: spin 2.5s cubic-bezier(0.25, 0.1, 0.25, 1) forwards; }
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(var(--end-rotation, 1080deg)); }
+}
+
+#spinner-result {
+  margin-top: 2rem;
+  font-family: 'Impact', sans-serif;
+  font-size: 2.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  text-align: center;
+  padding: 12px 24px;
+  border-radius: 4px;
+  animation: fadein 0.4s ease;
+}
+
+/* ----- category banner ----- */
+.category-banner {
+  font-family: 'Impact', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 1.3rem;
+  text-align: center;
+  padding: 14px;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+/* ----- play / answer ----- */
+.play-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 1.5rem 0;
+}
+
+#answer-input-area {
+  margin: 1.5rem 0;
+}
+#answer-input-area input,
+#answer-input-area select {
+  width: 100%;
+  padding: 14px;
+  font-size: 1.2rem;
+  background: var(--bg-elev);
+  color: var(--fg);
+  border: 1px solid #333;
+  border-radius: 4px;
+  text-align: center;
+}
+#answer-input-area input:focus,
+#answer-input-area select:focus {
+  outline: 2px solid var(--accent);
+}
+.bool-buttons {
+  display: flex;
+  gap: 12px;
+}
+.bool-buttons button {
+  flex: 1;
+  padding: 20px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.bool-buttons .yes { background: #2e7d32; color: #fff; }
+.bool-buttons .no  { background: #c62828; color: #fff; }
+
+/* ----- reveal ----- */
+.verdict {
+  font-family: 'Impact', sans-serif;
+  font-size: 2.4rem;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  border-radius: 4px;
+  letter-spacing: 0.05em;
+}
+.verdict.correct { background: #2e7d32; color: #fff; }
+.verdict.wrong   { background: #c62828; color: #fff; }
+
+.song-info {
+  background: var(--bg-elev);
+  padding: 1.5rem;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid var(--accent);
+}
+.reveal-artist { font-family: 'Impact', sans-serif; font-size: 1.6rem; text-transform: uppercase; }
+.reveal-song { font-size: 1.2rem; color: var(--fg-dim); margin-top: 4px; }
+.reveal-meta { margin-top: 12px; color: var(--fg-dim); font-size: 0.95rem; }
+
+/* ----- bingo card grid ----- */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  margin: 1.5rem 0;
+  aspect-ratio: 1 / 1;
+}
+.card-cell {
+  border-radius: 6px;
+  position: relative;
+  cursor: default;
+  transition: transform 0.1s;
+  border: 2px solid transparent;
+}
+.card-cell.markable {
+  cursor: pointer;
+  outline: 3px solid #fff;
+  outline-offset: 2px;
+  animation: pulse 1.2s infinite;
+}
+.card-cell.markable:active { transform: scale(0.92); }
+@keyframes pulse {
+  0%, 100% { outline-color: rgba(255,255,255,0.9); }
+  50%      { outline-color: rgba(255,255,255,0.3); }
+}
+.card-cell.marked::after {
+  content: '✕';
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 900;
+  color: #000;
+  text-shadow: 0 0 4px rgba(255,255,255,0.6);
+}
+.card-cell[data-color="decade"]       { background: var(--cat-decade); }
+.card-cell[data-color="year5"]        { background: var(--cat-year5); }
+.card-cell[data-color="year2"]        { background: var(--cat-year2); }
+.card-cell[data-color="country"]      { background: var(--cat-country); }
+.card-cell[data-color="artist"]       { background: var(--cat-artist); }
+.card-cell[data-color="beforeafter"]  { background: var(--cat-beforeafter); }
+.card-cell[data-color="free"]         { background: var(--cat-free); }
+.card-cell[data-color="free"]::after {
+  content: '★';
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  color: #fff;
+  opacity: 0.6;
+}
+
+/* ----- bingo win screen ----- */
+.bingo-title {
+  font-size: 4rem;
+  color: var(--accent-hot);
+  text-shadow: 0 0 20px var(--accent-hot);
+  animation: glow 1s ease-in-out infinite alternate;
+}
+@keyframes glow {
+  from { text-shadow: 0 0 10px var(--accent-hot); }
+  to   { text-shadow: 0 0 30px var(--accent-hot), 0 0 50px var(--accent-hot); }
+}

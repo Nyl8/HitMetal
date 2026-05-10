@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="theme-color" content="#0a0a0a">
+<title>Hitster Metal Bingo</title>
+<link rel="stylesheet" href="bingo.css">
+<link rel="manifest" href="manifest.json">
+</head>
+<body>
+
+<!-- AUTH / LOAD -->
+<section id="screen-loading" class="screen active">
+  <h1>HITSTER<br><span class="accent">METAL BINGO</span></h1>
+  <p id="loading-msg">Laden…</p>
+  <div id="loading-buttons"></div>
+</section>
+
+<!-- SETUP: speler-namen -->
+<section id="screen-setup" class="screen">
+  <h2>Spelers</h2>
+  <div id="player-list"></div>
+  <button id="add-player" class="btn-secondary">+ speler toevoegen</button>
+  <button id="start-game" class="btn-primary" disabled>Start spel</button>
+</section>
+
+<!-- PASS: telefoon doorgeven -->
+<section id="screen-pass" class="screen">
+  <h2>Geef de telefoon aan</h2>
+  <div id="pass-name" class="big-name"></div>
+  <button id="pass-ready" class="btn-primary">Ik ben er klaar voor</button>
+</section>
+
+<!-- BEURT: spinner -->
+<section id="screen-turn" class="screen">
+  <div class="turn-header">
+    <span id="turn-name"></span>
+    <button id="show-card" class="btn-link">mijn kaart</button>
+  </div>
+  <div id="spinner-stage">
+    <div id="spinner" class="spinner-idle">
+      <div class="spinner-ball"></div>
+    </div>
+    <div id="spinner-result" class="hidden"></div>
+  </div>
+  <button id="spin-btn" class="btn-primary">Spin</button>
+</section>
+
+<!-- AFSPELEN -->
+<section id="screen-play" class="screen">
+  <div class="category-banner" id="play-category"></div>
+  <p id="play-question" class="question"></p>
+  <div class="play-controls">
+    <button id="play-btn" class="btn-primary">▶ Speel fragment</button>
+    <button id="replay-btn" class="btn-secondary hidden">↻ Opnieuw</button>
+    <button id="answer-btn" class="btn-primary hidden">Geef antwoord</button>
+  </div>
+  <p id="play-status" class="status"></p>
+</section>
+
+<!-- ANTWOORD INVOEREN -->
+<section id="screen-answer" class="screen">
+  <div class="category-banner" id="answer-category"></div>
+  <p id="answer-question" class="question"></p>
+  <div id="answer-input-area"></div>
+  <button id="answer-submit" class="btn-primary">Bevestig</button>
+</section>
+
+<!-- REVEAL -->
+<section id="screen-reveal" class="screen">
+  <div id="reveal-verdict" class="verdict"></div>
+  <div class="song-info">
+    <div id="reveal-artist" class="reveal-artist"></div>
+    <div id="reveal-song" class="reveal-song"></div>
+    <div class="reveal-meta">
+      <span id="reveal-year"></span> · <span id="reveal-decade"></span> · <span id="reveal-country"></span>
+    </div>
+  </div>
+  <div id="reveal-mark-area" class="hidden">
+    <p>Kies een vakje om aan te kruisen:</p>
+    <div id="reveal-card-grid" class="card-grid"></div>
+  </div>
+  <button id="reveal-next" class="btn-primary">Volgende beurt</button>
+</section>
+
+<!-- KAART BEKIJKEN (tussendoor) -->
+<section id="screen-card" class="screen">
+  <h2 id="card-name"></h2>
+  <div id="card-grid" class="card-grid"></div>
+  <button id="card-close" class="btn-secondary">Terug</button>
+</section>
+
+<!-- BINGO! -->
+<section id="screen-bingo" class="screen">
+  <h1 class="bingo-title">BINGO!</h1>
+  <div id="bingo-winner" class="big-name"></div>
+  <button id="bingo-restart" class="btn-primary">Nieuw spel</button>
+</section>
+
+<script src="bingo.js"></script>
+</body>
+</html>

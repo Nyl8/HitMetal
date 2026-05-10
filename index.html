@@ -1,20 +1,187 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-  <meta name="theme-color" content="#0a0a0a">
-  <title>Hitster Metal</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="manifest" href="manifest.json">
-  <script src="https://unpkg.com/html5-qrcode@2.3.8/html5-qrcode.min.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="theme-color" content="#0a0a0a">
+<title>Hitster Metal</title>
+<link rel="manifest" href="manifest.json">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    height: 100%;
+    background: #0a0a0a;
+    color: #f5f5f5;
+    font-family: 'Trebuchet MS', 'Lucida Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  body {
+    min-height: 100vh;
+    background:
+      radial-gradient(ellipse at top, rgba(204,0,0,0.12), transparent 60%),
+      radial-gradient(ellipse at bottom, rgba(204,0,0,0.05), transparent 60%),
+      #0a0a0a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    text-align: center;
+  }
+  h1 {
+    font-family: 'Impact', 'Oswald', 'Arial Narrow', sans-serif;
+    font-size: 3.5rem;
+    line-height: 0.95;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin-bottom: 0.4rem;
+  }
+  h1 .accent { color: #ff1a1a; text-shadow: 0 0 30px rgba(255,26,26,0.4); }
+  .tagline { color: #888; font-size: 0.95rem; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 4rem; }
+  .choice-grid { display: flex; flex-direction: column; gap: 16px; width: 100%; max-width: 360px; }
+  .mode-btn {
+    background: #161616;
+    border: 2px solid #333;
+    border-radius: 6px;
+    padding: 28px 24px;
+    color: #f5f5f5;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: left;
+    transition: transform 0.05s, border-color 0.2s, background 0.2s;
+    -webkit-tap-highlight-color: transparent;
+    display: block;
+  }
+  .mode-btn:active { transform: scale(0.98); }
+  .mode-btn:hover { background: #1c1c1c; }
+  .mode-btn.scan { border-color: #cc0000; }
+  .mode-btn.scan:hover { border-color: #ff1a1a; box-shadow: 0 0 30px rgba(204,0,0,0.2); }
+  .mode-btn.bingo { border-color: #2196f3; }
+  .mode-btn.bingo:hover { border-color: #42a5f5; box-shadow: 0 0 30px rgba(33,150,243,0.2); }
+  .mode-icon { font-size: 1.8rem; display: block; margin-bottom: 8px; }
+  .mode-name {
+    font-family: 'Impact', sans-serif;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+  .mode-desc { color: #888; font-size: 0.85rem; line-height: 1.4; }
+  footer { margin-top: 4rem; color: #444; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; }
+  #auth-msg { font-size: 1.1rem; color: #888; margin: 2rem 0; }
+</style>
 </head>
 <body>
-  <main id="app">
-    <div id="logo">⚡ HITSTER METAL ⚡</div>
-    <div id="status">Even geduld…</div>
-    <div id="actions"></div>
-  </main>
-  <script src="app.js"></script>
+  <div id="content">
+    <h1>HITSTER<br><span class="accent">METAL</span></h1>
+    <p id="auth-msg">Even geduld…</p>
+  </div>
+
+<script>
+/* =====================================================================
+ * INDEX = homepage + OAuth callback router
+ * Bij ?code=  → token exchange + redirect naar returnTo
+ * Bij ?error= → foutmelding
+ * Anders      → keuzescherm
+ * ===================================================================== */
+
+const SPOTIFY_CLIENT_ID = "cb23c82938354534bc35099f6fde35f3";
+const TOKEN_URL = "https://accounts.spotify.com/api/token";
+
+const REDIRECT_URI = (() => {
+  let p = window.location.pathname;
+  const i = p.lastIndexOf("/");
+  if (i >= 0) p = p.substring(0, i + 1);
+  return window.location.origin + p;
+})();
+
+const LS = {
+  token: "hm_access_token",
+  refresh: "hm_refresh_token",
+  expires: "hm_token_expires",
+  verifier: "hm_code_verifier",
+  returnTo: "hm_return_to",
+};
+
+function showChoice() {
+  document.getElementById("content").innerHTML = `
+    <h1>HITSTER<br><span class="accent">METAL</span></h1>
+    <p class="tagline">Kies je modus</p>
+    <div class="choice-grid">
+      <a href="scan.html" class="mode-btn scan">
+        <span class="mode-icon">📷</span>
+        <div class="mode-name">Scan-modus</div>
+        <div class="mode-desc">Scan een fysieke kaart, hoor het nummer.</div>
+      </a>
+      <a href="bingo.html" class="mode-btn bingo">
+        <span class="mode-icon">🎯</span>
+        <div class="mode-name">Bingo-modus</div>
+        <div class="mode-desc">Volledig spel op één telefoon, doorgeven per beurt.</div>
+      </a>
+    </div>
+    <footer>100 kaarten · 1969–2022</footer>
+  `;
+}
+
+function showError(msg) {
+  document.getElementById("content").innerHTML = `
+    <h1>HITSTER<br><span class="accent">METAL</span></h1>
+    <p id="auth-msg" style="color:#ff6b6b">${msg}</p>
+    <a href="${REDIRECT_URI}" style="color:#fff;text-decoration:underline">← Terug naar start</a>
+  `;
+}
+
+async function exchangeCode(code) {
+  const verifier = localStorage.getItem(LS.verifier);
+  if (!verifier) throw new Error("Geen verifier in localStorage");
+
+  const r = await fetch(TOKEN_URL, {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams({
+      grant_type: "authorization_code",
+      code,
+      redirect_uri: REDIRECT_URI,
+      client_id: SPOTIFY_CLIENT_ID,
+      code_verifier: verifier,
+    }),
+  });
+  if (!r.ok) {
+    const t = await r.text();
+    throw new Error(`Token exchange faalde: ${t}`);
+  }
+  const data = await r.json();
+  localStorage.setItem(LS.token, data.access_token);
+  if (data.refresh_token) localStorage.setItem(LS.refresh, data.refresh_token);
+  localStorage.setItem(LS.expires, Date.now() + (data.expires_in - 60) * 1000);
+  localStorage.removeItem(LS.verifier);
+}
+
+async function main() {
+  const params = new URLSearchParams(window.location.search);
+
+  if (params.has("error")) {
+    showError("Spotify-login afgewezen: " + params.get("error"));
+    return;
+  }
+
+  if (params.has("code")) {
+    try {
+      await exchangeCode(params.get("code"));
+      const ret = localStorage.getItem(LS.returnTo) || REDIRECT_URI;
+      localStorage.removeItem(LS.returnTo);
+      window.location.replace(ret);
+    } catch (e) {
+      showError("Verbinden faalde: " + e.message);
+    }
+    return;
+  }
+
+  showChoice();
+}
+
+main();
+</script>
 </body>
 </html>
