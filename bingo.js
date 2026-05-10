@@ -36,7 +36,7 @@ const REDIRECT_URI = (() => {
   return window.location.origin + p;
 })();
 
-const FRAGMENT_MS = 25000;
+const FRAGMENT_MS = 45000;
 const THRESHOLD_YEAR = 1995;
 const STORAGE_KEY = "hm_bingo_state_v3";
 
@@ -479,7 +479,7 @@ async function startPlayback() {
   $("play-status").textContent = "Afspelen…";
   try {
     await playCard(song);
-    $("play-status").textContent = "▶ aan het spelen (25s)";
+    $("play-status").textContent = "▶ aan het spelen (45s)";
     $("replay-btn").classList.remove("hidden");
     $("answer-btn").classList.remove("hidden");
   } catch (e) {
@@ -620,10 +620,36 @@ function goToReveal() {
   verdict.textContent = correct ? "✓ Goed!" : "✗ Helaas";
   verdict.className = "verdict " + (correct ? "correct" : "wrong");
 
-  $("reveal-artist").textContent = song.artist;
+  // Bij artiest-categorie: alleen artiest groot. Bij andere: artiest medium + antwoord groot.
+  const isArtistCat = category.id === "artist";
+  $("reveal-artist").textContent = isArtistCat ? "" : song.artist;
   $("reveal-song").textContent = song.song;
-  $("reveal-year").textContent = song.year;
-  $("reveal-country").textContent = COUNTRIES[song.country] || song.country;
+
+  const big = $("reveal-big");
+  let bigText = "";
+  let sizeClass = "";
+  switch (category.id) {
+    case "decade":
+      bigText = decadeOf(song.year) + "s";
+      break;
+    case "year5":
+      bigText = String(song.year);
+      break;
+    case "country":
+      bigText = COUNTRIES[song.country] || song.country;
+      sizeClass = bigText.length > 12 ? "long" : "medium";
+      break;
+    case "artist":
+      bigText = song.artist;
+      sizeClass = song.artist.length > 14 ? "long" : (song.artist.length > 8 ? "medium" : "");
+      break;
+    case "beforeafter":
+      bigText = song.year < THRESHOLD_YEAR ? "VÓÓR " + THRESHOLD_YEAR : "NA " + THRESHOLD_YEAR;
+      sizeClass = "medium";
+      break;
+  }
+  big.textContent = bigText;
+  big.className = "hitster-card-big" + (sizeClass ? " " + sizeClass : "");
 
   const markArea = $("reveal-mark-area");
   const player = state.players[state.turnIdx];
