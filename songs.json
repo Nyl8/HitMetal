@@ -1,0 +1,905 @@
+{
+  "version": 1,
+  "cards": [
+    {
+      "cardId": "001",
+      "trackId": "0hCB0YR03f6AmQaHbwWDe8",
+      "artist": "Led Zeppelin",
+      "song": "Whole Lotta Love",
+      "year": 1969,
+      "startMs": 90000,
+      "durationMs": 333893
+    },
+    {
+      "cardId": "002",
+      "trackId": "3hwuHzRicnu6Ji9i1JLzor",
+      "artist": "Black Sabbath",
+      "song": "Paranoid",
+      "year": 1970,
+      "startMs": 55646,
+      "durationMs": 168626
+    },
+    {
+      "cardId": "003",
+      "trackId": "5MMnwYs0hIxkENRsbkWJ2G",
+      "artist": "Deep Purple",
+      "song": "Smoke on the Water",
+      "year": 1972,
+      "startMs": 90000,
+      "durationMs": 340742
+    },
+    {
+      "cardId": "004",
+      "trackId": "3IjrDeaVRFEi3GgHI5xyjX",
+      "artist": "Kiss",
+      "song": "Detroit Rock City",
+      "year": 1976,
+      "startMs": 75063,
+      "durationMs": 227466
+    },
+    {
+      "cardId": "005",
+      "trackId": "1aDNYyeU62BuQsBAY18i48",
+      "artist": "Rainbow",
+      "song": "Stargazer",
+      "year": 1976,
+      "startMs": 90000,
+      "durationMs": 506160
+    },
+    {
+      "cardId": "006",
+      "trackId": "43DeSV93pJPT4lCZaWZ6b1",
+      "artist": "Thin Lizzy",
+      "song": "The Boys Are Back in Town",
+      "year": 1976,
+      "startMs": 88017,
+      "durationMs": 266720
+    },
+    {
+      "cardId": "007",
+      "trackId": "4pbJqGIASGPr0ZpGpnWkDn",
+      "artist": "Queen",
+      "song": "We Will Rock You",
+      "year": 1977,
+      "startMs": 40281,
+      "durationMs": 122066
+    },
+    {
+      "cardId": "008",
+      "trackId": "2zYzyRzz6pRmhPzyfMEC8s",
+      "artist": "AC/DC",
+      "song": "Highway to Hell",
+      "year": 1979,
+      "startMs": 68676,
+      "durationMs": 208110
+    },
+    {
+      "cardId": "009",
+      "trackId": "08mG3Y1vljYA6bvDt4Wqkj",
+      "artist": "AC/DC",
+      "song": "Back in Black",
+      "year": 1980,
+      "startMs": 84480,
+      "durationMs": 256000
+    },
+    {
+      "cardId": "010",
+      "trackId": "2RaA6kIcvomt77qlIgGhCT",
+      "artist": "Judas Priest",
+      "song": "Breaking the Law",
+      "year": 1980,
+      "startMs": 50767,
+      "durationMs": 153840
+    },
+    {
+      "cardId": "011",
+      "trackId": "3CIOopLwvyMvXk97ZEksKO",
+      "artist": "Motörhead",
+      "song": "Ace of Spades",
+      "year": 1980,
+      "startMs": 55545,
+      "durationMs": 168320
+    },
+    {
+      "cardId": "012",
+      "trackId": "7ACxUo21jtTHzy7ZEV56vU",
+      "artist": "Ozzy Osbourne",
+      "song": "Crazy Train",
+      "year": 1980,
+      "startMs": 90000,
+      "durationMs": 293183
+    },
+    {
+      "cardId": "013",
+      "trackId": "54yLLvpezvPO1lA3GspiZj",
+      "artist": "Dio",
+      "song": "Holy Diver",
+      "year": 1983,
+      "startMs": 90000,
+      "durationMs": 340640
+    },
+    {
+      "cardId": "014",
+      "trackId": "4OROzZUy6gOWN4UGQVaZMF",
+      "artist": "Iron Maiden",
+      "song": "The Trooper",
+      "year": 1983,
+      "startMs": 83401,
+      "durationMs": 252733
+    },
+    {
+      "cardId": "015",
+      "trackId": "2O7UGwJPVlix15Wn4sa5vw",
+      "artist": "Metallica",
+      "song": "Ride the Lightning",
+      "year": 1984,
+      "startMs": 90000,
+      "durationMs": 396986
+    },
+    {
+      "cardId": "016",
+      "trackId": "32sQ2J49CEEoZVGoSHSmsd",
+      "artist": "Celtic Frost",
+      "song": "Circle of the Tyrants",
+      "year": 1985,
+      "startMs": 90000,
+      "durationMs": 276933
+    },
+    {
+      "cardId": "017",
+      "trackId": "3VwXV7wmMgHL5fF7tgenkr",
+      "artist": "S.O.D.",
+      "song": "Speak English or Die",
+      "year": 1985,
+      "startMs": 47827,
+      "durationMs": 144933
+    },
+    {
+      "cardId": "018",
+      "trackId": "37ZJ0p5Jm13JPevGcx4SkF",
+      "artist": "Bon Jovi",
+      "song": "Livin' on a Prayer",
+      "year": 1986,
+      "startMs": 82266,
+      "durationMs": 249293
+    },
+    {
+      "cardId": "019",
+      "trackId": "3MrRksHupTVEQ7YbA0FsZK",
+      "artist": "Europe",
+      "song": "The Final Countdown",
+      "year": 1986,
+      "startMs": 90000,
+      "durationMs": 310333
+    },
+    {
+      "cardId": "020",
+      "trackId": "5a2hIQWInPjqkkFiUEgxoX",
+      "artist": "Megadeth",
+      "song": "Peace Sells",
+      "year": 1986,
+      "startMs": 80572,
+      "durationMs": 244160
+    },
+    {
+      "cardId": "021",
+      "trackId": "2MuWTIM3b0YEAskbeeFE1i",
+      "artist": "Metallica",
+      "song": "Master of Puppets",
+      "year": 1986,
+      "startMs": 90000,
+      "durationMs": 515386
+    },
+    {
+      "cardId": "022",
+      "trackId": "4fiOTntQKr24p07FvQDHZE",
+      "artist": "Slayer",
+      "song": "Raining Blood",
+      "year": 1986,
+      "startMs": 84211,
+      "durationMs": 255186
+    },
+    {
+      "cardId": "023",
+      "trackId": "4fjWStUaP7aXdT0d3YxvPo",
+      "artist": "Anthrax",
+      "song": "Caught in a Mosh",
+      "year": 1987,
+      "startMs": 90000,
+      "durationMs": 300173
+    },
+    {
+      "cardId": "024",
+      "trackId": "7snQQk1zcKl8gZ92AnueZW",
+      "artist": "Guns N' Roses",
+      "song": "Sweet Child o' Mine",
+      "year": 1987,
+      "startMs": 90000,
+      "durationMs": 356066
+    },
+    {
+      "cardId": "025",
+      "trackId": "1E4r8aMHDP3j2tq8atKzzt",
+      "artist": "Living Colour",
+      "song": "Cult of Personality",
+      "year": 1988,
+      "startMs": 90000,
+      "durationMs": 292800
+    },
+    {
+      "cardId": "026",
+      "trackId": "5XcZRgJv3zMhTqCyESjQrF",
+      "artist": "Alice Cooper",
+      "song": "Poison",
+      "year": 1989,
+      "startMs": 89004,
+      "durationMs": 269712
+    },
+    {
+      "cardId": "027",
+      "trackId": "2UnDZRV3PKN1Fa6q9lQOV8",
+      "artist": "Bolt Thrower",
+      "song": "World Eater",
+      "year": 1989,
+      "startMs": 90000,
+      "durationMs": 294600
+    },
+    {
+      "cardId": "028",
+      "trackId": "4ReyTz0y3TGkX48wO3Llot",
+      "artist": "Faith No More",
+      "song": "Epic",
+      "year": 1989,
+      "startMs": 90000,
+      "durationMs": 293653
+    },
+    {
+      "cardId": "029",
+      "trackId": "5F6ZrWLngDICyjazxM1gNq",
+      "artist": "Obituary",
+      "song": "Slowly We Rot",
+      "year": 1989,
+      "startMs": 72080,
+      "durationMs": 218426
+    },
+    {
+      "cardId": "030",
+      "trackId": "3d6aionOhy3INw2G0SVezY",
+      "artist": "Pestilence",
+      "song": "Out of the Body",
+      "year": 1989,
+      "startMs": 90000,
+      "durationMs": 279106
+    },
+    {
+      "cardId": "031",
+      "trackId": "57bgtoPSgt236HzfBOd8kj",
+      "artist": "AC/DC",
+      "song": "Thunderstruck",
+      "year": 1990,
+      "startMs": 90000,
+      "durationMs": 292333
+    },
+    {
+      "cardId": "032",
+      "trackId": "5faD0zZ9fMa3J5ZN3lIWtp",
+      "artist": "Entombed",
+      "song": "Left Hand Path",
+      "year": 1990,
+      "startMs": 90000,
+      "durationMs": 399093
+    },
+    {
+      "cardId": "033",
+      "trackId": "5LyRtsQLhcXmy50VXhQXXS",
+      "artist": "Megadeth",
+      "song": "Holy Wars... The Punishment Due",
+      "year": 1990,
+      "startMs": 90000,
+      "durationMs": 392600
+    },
+    {
+      "cardId": "034",
+      "trackId": "2SgbR6ttzoNlCRGQOKjrop",
+      "artist": "Pantera",
+      "song": "Cowboys From Hell",
+      "year": 1990,
+      "startMs": 80365,
+      "durationMs": 243533
+    },
+    {
+      "cardId": "035",
+      "trackId": "3DwQ7AH3xGD9h65ezslm6q",
+      "artist": "Metallica",
+      "song": "Enter Sandman",
+      "year": 1991,
+      "startMs": 90000,
+      "durationMs": 331560
+    },
+    {
+      "cardId": "036",
+      "trackId": "4CeeEOM32jQcH3eN9Q2dGj",
+      "artist": "Nirvana",
+      "song": "Smells Like Teen Spirit",
+      "year": 1991,
+      "startMs": 90000,
+      "durationMs": 301920
+    },
+    {
+      "cardId": "037",
+      "trackId": "3YgkTpILtOWngT7PVHg8kO",
+      "artist": "Ugly Kid Joe",
+      "song": "Everything About You",
+      "year": 1991,
+      "startMs": 85866,
+      "durationMs": 260200
+    },
+    {
+      "cardId": "038",
+      "trackId": "5sFDReWLrZHLFZFjHsjUTS",
+      "artist": "Alice in Chains",
+      "song": "Would?",
+      "year": 1992,
+      "startMs": 68235,
+      "durationMs": 206773
+    },
+    {
+      "cardId": "039",
+      "trackId": "4pFC6tuWErxbO61oFFq3BQ",
+      "artist": "Cannibal Corpse",
+      "song": "Hammer Smashed Face",
+      "year": 1992,
+      "startMs": 80110,
+      "durationMs": 242760
+    },
+    {
+      "cardId": "040",
+      "trackId": "59WN2psjkt1tyaxjspN8fp",
+      "artist": "Rage Against The Machine",
+      "song": "Killing in the Name",
+      "year": 1992,
+      "startMs": 90000,
+      "durationMs": 313573
+    },
+    {
+      "cardId": "041",
+      "trackId": "6qLgGLeawKyhMFJ848XtYD",
+      "artist": "Sleep",
+      "song": "Dragonaut",
+      "year": 1992,
+      "startMs": 90000,
+      "durationMs": 343160
+    },
+    {
+      "cardId": "042",
+      "trackId": "2Nk68SHgYc6rpAmYCfohe2",
+      "artist": "Morbid Angel",
+      "song": "God of Emptiness",
+      "year": 1993,
+      "startMs": 90000,
+      "durationMs": 326933
+    },
+    {
+      "cardId": "043",
+      "trackId": "710B9xFjNOisQtKtppZE9p",
+      "artist": "Type O Negative",
+      "song": "Black No. 1",
+      "year": 1993,
+      "startMs": 90000,
+      "durationMs": 675653
+    },
+    {
+      "cardId": "044",
+      "trackId": "6g48vpikqU2atsrDXdGzKo",
+      "artist": "Corrosion of Conformity",
+      "song": "Clean My Wounds",
+      "year": 1994,
+      "startMs": 70188,
+      "durationMs": 212693
+    },
+    {
+      "cardId": "045",
+      "trackId": "4jjlYfhduOrGY4mySof5C3",
+      "artist": "Emperor",
+      "song": "I Am the Black Wizards",
+      "year": 1994,
+      "startMs": 90000,
+      "durationMs": 360840
+    },
+    {
+      "cardId": "046",
+      "trackId": "3qHlBxD3acw5nrl7Padt0v",
+      "artist": "Machine Head",
+      "song": "Davidian",
+      "year": 1994,
+      "startMs": 90000,
+      "durationMs": 296626
+    },
+    {
+      "cardId": "047",
+      "trackId": "2EoOZnxNgtmZaD8uUmz2nD",
+      "artist": "Soundgarden",
+      "song": "Black Hole Sun",
+      "year": 1994,
+      "startMs": 90000,
+      "durationMs": 318586
+    },
+    {
+      "cardId": "048",
+      "trackId": "7ks7Kh6wsvlM52gfIHqcfi",
+      "artist": "Cathedral",
+      "song": "Hopkins (The Witchfinder General)",
+      "year": 1995,
+      "startMs": 90000,
+      "durationMs": 319093
+    },
+    {
+      "cardId": "049",
+      "trackId": "0ItAcLSkUiePOmFGun3cSe",
+      "artist": "Death",
+      "song": "Crystal Mountain",
+      "year": 1995,
+      "startMs": 90000,
+      "durationMs": 307426
+    },
+    {
+      "cardId": "050",
+      "trackId": "069JyEdShPein3PBle19go",
+      "artist": "Dissection",
+      "song": "Night's Blood",
+      "year": 1995,
+      "startMs": 90000,
+      "durationMs": 401658
+    },
+    {
+      "cardId": "051",
+      "trackId": "5YeQoMo5py82YmqXMTjM5S",
+      "artist": "Fear Factory",
+      "song": "Replica",
+      "year": 1995,
+      "startMs": 78328,
+      "durationMs": 237360
+    },
+    {
+      "cardId": "052",
+      "trackId": "231iTjS7JBWWlDNQdfOijI",
+      "artist": "Moonspell",
+      "song": "Wolfheart",
+      "year": 1995,
+      "startMs": 90000,
+      "durationMs": 463600
+    },
+    {
+      "cardId": "053",
+      "trackId": "11Q5n9PmpRQbbblwHygugt",
+      "artist": "My Dying Bride",
+      "song": "The Cry of Mankind",
+      "year": 1995,
+      "startMs": 90000,
+      "durationMs": 733333
+    },
+    {
+      "cardId": "054",
+      "trackId": "3Td1mgf8KMXnjVR5utH3lz",
+      "artist": "Rob Zombie / White Zombie",
+      "song": "More Human Than Human",
+      "year": 1995,
+      "startMs": 78201,
+      "durationMs": 236973
+    },
+    {
+      "cardId": "055",
+      "trackId": "2aIB1CdRRG7YLBu9hNw9nR",
+      "artist": "Marilyn Manson",
+      "song": "The Beautiful People",
+      "year": 1996,
+      "startMs": 72212,
+      "durationMs": 218826
+    },
+    {
+      "cardId": "056",
+      "trackId": "1r9DNUBPD0X1e05BMQkDNz",
+      "artist": "Samael",
+      "song": "Rain",
+      "year": 1996,
+      "startMs": 79609,
+      "durationMs": 241240
+    },
+    {
+      "cardId": "057",
+      "trackId": "6ursmCnbc9oDRGa2yHKkoZ",
+      "artist": "Sepultura",
+      "song": "Roots Bloody Roots",
+      "year": 1996,
+      "startMs": 70043,
+      "durationMs": 212253
+    },
+    {
+      "cardId": "058",
+      "trackId": "2t0DnOIEpkbJqDc6h1IKnw",
+      "artist": "Dimmu Borgir",
+      "song": "Mourning Palace",
+      "year": 1997,
+      "startMs": 90000,
+      "durationMs": 313360
+    },
+    {
+      "cardId": "059",
+      "trackId": "5UWwZ5lm5PKu6eKsHAGxOk",
+      "artist": "Foo Fighters",
+      "song": "Everlong",
+      "year": 1997,
+      "startMs": 82680,
+      "durationMs": 250546
+    },
+    {
+      "cardId": "060",
+      "trackId": "5awDvzxWfd53SSrsRZ8pXO",
+      "artist": "Rammstein",
+      "song": "Du Hast",
+      "year": 1997,
+      "startMs": 77294,
+      "durationMs": 234226
+    },
+    {
+      "cardId": "061",
+      "trackId": "6W21LNLz9Sw7sUSNWMSHRu",
+      "artist": "Korn",
+      "song": "Freak on a Leash",
+      "year": 1998,
+      "startMs": 84390,
+      "durationMs": 255729
+    },
+    {
+      "cardId": "062",
+      "trackId": "4EchqUKQ3qAQuRNKmeIpnf",
+      "artist": "The Offspring",
+      "song": "The Kids Aren't Alright",
+      "year": 1998,
+      "startMs": 59452,
+      "durationMs": 180160
+    },
+    {
+      "cardId": "063",
+      "trackId": "3zlaF6d64vPWScaR0hSaqB",
+      "artist": "The Dillinger Escape Plan",
+      "song": "43% Burnt",
+      "year": 1999,
+      "startMs": 89530,
+      "durationMs": 271306
+    },
+    {
+      "cardId": "064",
+      "trackId": "0IVdlBreRkZn0ftoUwB0T6",
+      "artist": "Cradle of Filth",
+      "song": "Her Ghost in the Fog",
+      "year": 2000,
+      "startMs": 90000,
+      "durationMs": 384813
+    },
+    {
+      "cardId": "065",
+      "trackId": "40rvBMQizxkIqnjPdEWY1v",
+      "artist": "Disturbed",
+      "song": "Down with the Sickness",
+      "year": 2000,
+      "startMs": 90000,
+      "durationMs": 279213
+    },
+    {
+      "cardId": "066",
+      "trackId": "5cZqsjVs6MevCnAkasbEOX",
+      "artist": "Limp Bizkit",
+      "song": "Break Stuff",
+      "year": 2000,
+      "startMs": 55012,
+      "durationMs": 166706
+    },
+    {
+      "cardId": "067",
+      "trackId": "3K4HG9evC7dg3N0R9cYqk4",
+      "artist": "Linkin Park",
+      "song": "One Step Closer",
+      "year": 2000,
+      "startMs": 51919,
+      "durationMs": 157333
+    },
+    {
+      "cardId": "068",
+      "trackId": "4mwiaj9c4V0pW5y8t9mYHa",
+      "artist": "Nightwish",
+      "song": "Wishmaster",
+      "year": 2000,
+      "startMs": 87128,
+      "durationMs": 264026
+    },
+    {
+      "cardId": "069",
+      "trackId": "5W8YXBz9MTIDyrpYaCg2Ky",
+      "artist": "Papa Roach",
+      "song": "Last Resort",
+      "year": 2000,
+      "startMs": 65968,
+      "durationMs": 199906
+    },
+    {
+      "cardId": "070",
+      "trackId": "3gVhsZtseYtY1fMuyYq06F",
+      "artist": "Rammstein",
+      "song": "Sonne",
+      "year": 2001,
+      "startMs": 89905,
+      "durationMs": 272440
+    },
+    {
+      "cardId": "071",
+      "trackId": "2DlHlPMa4M17kufBvI2lEN",
+      "artist": "System of a Down",
+      "song": "Chop Suey!",
+      "year": 2001,
+      "startMs": 69379,
+      "durationMs": 210240
+    },
+    {
+      "cardId": "072",
+      "trackId": "55mJleti2WfWEFNFcBduhc",
+      "artist": "Tool",
+      "song": "Schism",
+      "year": 2001,
+      "startMs": 90000,
+      "durationMs": 407860
+    },
+    {
+      "cardId": "073",
+      "trackId": "140cSu65JC8smYw53nPP0q",
+      "artist": "Within Temptation",
+      "song": "Ice Queen",
+      "year": 2001,
+      "startMs": 90000,
+      "durationMs": 322800
+    },
+    {
+      "cardId": "074",
+      "trackId": "3YuaBvuZqcwN3CEAyyoaei",
+      "artist": "Audioslave",
+      "song": "Like a Stone",
+      "year": 2002,
+      "startMs": 90000,
+      "durationMs": 293960
+    },
+    {
+      "cardId": "075",
+      "trackId": "6y20BV5L33R8YXM0YuI38N",
+      "artist": "Queens of the Stone Age",
+      "song": "No One Knows",
+      "year": 2002,
+      "startMs": 90000,
+      "durationMs": 278746
+    },
+    {
+      "cardId": "076",
+      "trackId": "7s6Rk59SDllxPq5omrxJT4",
+      "artist": "Black Label Society",
+      "song": "Stillborn",
+      "year": 2003,
+      "startMs": 64693,
+      "durationMs": 196040
+    },
+    {
+      "cardId": "077",
+      "trackId": "0COqiPhxzoWICwFCS4eZcp",
+      "artist": "Evanescence",
+      "song": "Bring Me to Life",
+      "year": 2003,
+      "startMs": 77844,
+      "durationMs": 235893
+    },
+    {
+      "cardId": "078",
+      "trackId": "2nLtzopw4rPReszdYBJU6h",
+      "artist": "Linkin Park",
+      "song": "Numb",
+      "year": 2003,
+      "startMs": 61881,
+      "durationMs": 187520
+    },
+    {
+      "cardId": "079",
+      "trackId": "2nUy0ifVE7UwtOK4rugFsP",
+      "artist": "Killswitch Engage",
+      "song": "The End of Heartache",
+      "year": 2004,
+      "startMs": 90000,
+      "durationMs": 298106
+    },
+    {
+      "cardId": "080",
+      "trackId": "5OjCsHeByDYEGxMrb1z8KQ",
+      "artist": "Gojira",
+      "song": "Flying Whales",
+      "year": 2005,
+      "startMs": 90000,
+      "durationMs": 464453
+    },
+    {
+      "cardId": "081",
+      "trackId": "0ppdt8zRZOHIKh4ZDB0Zp9",
+      "artist": "Opeth",
+      "song": "Ghost of Perdition",
+      "year": 2005,
+      "startMs": 90000,
+      "durationMs": 629480
+    },
+    {
+      "cardId": "082",
+      "trackId": "18lR4BzEs7e3qzc0KVkTpU",
+      "artist": "Linkin Park",
+      "song": "What I've Done",
+      "year": 2007,
+      "startMs": 67724,
+      "durationMs": 205226
+    },
+    {
+      "cardId": "083",
+      "trackId": "4SRYpmb1PH3vjU3dEoLIST",
+      "artist": "Meshuggah",
+      "song": "Bleed",
+      "year": 2008,
+      "startMs": 90000,
+      "durationMs": 442546
+    },
+    {
+      "cardId": "084",
+      "trackId": "1MoEyYsa9Y0FvApwLskO1l",
+      "artist": "Sabaton",
+      "song": "Ghost Division",
+      "year": 2008,
+      "startMs": 76291,
+      "durationMs": 231186
+    },
+    {
+      "cardId": "085",
+      "trackId": "24izI60feYFKZ0IUl476Kb",
+      "artist": "Paradise Lost",
+      "song": "Faith Divides Us - Death Unites Us",
+      "year": 2009,
+      "startMs": 87001,
+      "durationMs": 263640
+    },
+    {
+      "cardId": "086",
+      "trackId": "0RZilNVJdWibukEtyp9Ixj",
+      "artist": "Megadeth",
+      "song": "Public Enemy No. 1",
+      "year": 2011,
+      "startMs": 84259,
+      "durationMs": 255333
+    },
+    {
+      "cardId": "087",
+      "trackId": "3IKJNHnVZ2bXGjAFBJiUYo",
+      "artist": "Black Sabbath",
+      "song": "God Is Dead?",
+      "year": 2013,
+      "startMs": 90000,
+      "durationMs": 532266
+    },
+    {
+      "cardId": "088",
+      "trackId": "3wCoJ2MONhPWJZoHzJOZAt",
+      "artist": "Devin Townsend",
+      "song": "Kingdom",
+      "year": 2014,
+      "startMs": 90000,
+      "durationMs": 329106
+    },
+    {
+      "cardId": "089",
+      "trackId": "1smvmwmbrQiBwgJZMxVtup",
+      "artist": "Iron Maiden",
+      "song": "Speed of Light",
+      "year": 2015,
+      "startMs": 90000,
+      "durationMs": 301745
+    },
+    {
+      "cardId": "090",
+      "trackId": "1WWq2DUV0UbO4XJda2usuv",
+      "artist": "Lamb of God",
+      "song": "512",
+      "year": 2015,
+      "startMs": 90000,
+      "durationMs": 284840
+    },
+    {
+      "cardId": "091",
+      "trackId": "6W2KBpMMXW17r7dPyqi8Iu",
+      "artist": "Slayer",
+      "song": "Repentless",
+      "year": 2015,
+      "startMs": 65955,
+      "durationMs": 199866
+    },
+    {
+      "cardId": "092",
+      "trackId": "5TNhjanmvwvmjCz2WYwSAv",
+      "artist": "Ghost",
+      "song": "Square Hammer",
+      "year": 2016,
+      "startMs": 78966,
+      "durationMs": 239293
+    },
+    {
+      "cardId": "093",
+      "trackId": "0bUgTRe5st6TMbRCEjKezX",
+      "artist": "Sabaton",
+      "song": "The Last Stand",
+      "year": 2016,
+      "startMs": 77827,
+      "durationMs": 235840
+    },
+    {
+      "cardId": "094",
+      "trackId": "2bPGTMB5sFfFYQ2YvSmup0",
+      "artist": "Rammstein",
+      "song": "Deutschland",
+      "year": 2019,
+      "startMs": 90000,
+      "durationMs": 322339
+    },
+    {
+      "cardId": "095",
+      "trackId": "0h6vLT1rLneoc5I4sOxvB1",
+      "artist": "Deftones",
+      "song": "Ohms",
+      "year": 2020,
+      "startMs": 82573,
+      "durationMs": 250222
+    },
+    {
+      "cardId": "096",
+      "trackId": "4KugBNgb6iilXInnWQrMVh",
+      "artist": "Trivium",
+      "song": "What the Dead Men Say",
+      "year": 2020,
+      "startMs": 90000,
+      "durationMs": 285522
+    },
+    {
+      "cardId": "097",
+      "trackId": "7m2ZeXTKhW8e4MYEIYh2pT",
+      "artist": "Sabaton",
+      "song": "Christmas Truce",
+      "year": 2021,
+      "startMs": 90000,
+      "durationMs": 318000
+    },
+    {
+      "cardId": "098",
+      "trackId": "6nDHNHOVNuWK48N24Fktcs",
+      "artist": "Volbeat",
+      "song": "Wait a Minute My Girl",
+      "year": 2021,
+      "startMs": 46217,
+      "durationMs": 140053
+    },
+    {
+      "cardId": "099",
+      "trackId": "5dfPDJsrA3uKVoII8sIIHC",
+      "artist": "In Flames",
+      "song": "State of Slow Decay",
+      "year": 2022,
+      "startMs": 78601,
+      "durationMs": 238187
+    },
+    {
+      "cardId": "100",
+      "trackId": "6rsoBvxrlxdmqJyGPPciyq",
+      "artist": "Slipknot",
+      "song": "The Dying Song (Time to Sing)",
+      "year": 2022,
+      "startMs": 67183,
+      "durationMs": 203586
+    }
+  ]
+}

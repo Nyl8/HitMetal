@@ -1,0 +1,10 @@
+{
+  "name": "Hitster Metal",
+  "short_name": "Hitster Metal",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#cc0000",
+  "icons": []
+}
